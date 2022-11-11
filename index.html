@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <button class="show-modal">?</button>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>*Rules*</h1>
+      <p>
+        1 - Roll Dice, till you dice "1" then switch the player <br />
+        2 - Roll Dice, till you dice "1" then you lose your "current score"
+        <br />
+        3 - Roll Dice, if you don't want to hold your current score <br />
+        4 - First player who achieves 100, wins the game. <br /><br />
+        That's it let's play the game!
+      </p>
+    </div>
+    <main class="main">
+      <section class="player player-0">
+        <h2 class="name">PLAYER 1</h2>
+        <p class="score" id="score-0">0</p>
+        <div class="current">
+          <p class="current-text" id="current-text-0">Current</p>
+          <p class="current-score" id="current-0">0</p>
+        </div>
+      </section>
+      <section class="player player-1">
+        <h2 class="name">PLAYER 2</h2>
+        <p class="score" id="score-1">0</p>
+        <div class="current">
+          <p class="current-text" id="current-text-1">Current</p>
+          <p class="current-score" id="current-1">0</p>
+        </div>
+      </section>
+      <img class="dices" src="contents/dice1.png" alt="dice" />
+      <button class="btn btnnew">NEW GAME</button>
+      <button class="btn btnroll">ROLL DICE</button>
+      <button class="btn btnhold">HOLD</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Share Tech Mono", monospace;
+  background: linear-gradient(135deg, #09e485 0%, #0291e3 100%);
+}
+body main {
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+  background-color: transparent;
+  width: 65em;
+  height: 40em;
+  box-shadow: 56px 55px 46px 5px rgba(75, 197, 227, 0.75);
+  -webkit-box-shadow: 56px 55px 46px 5px rgba(68, 225, 215, 0.75);
+  -moz-box-shadow: 56px 55px 46px 5px rgba(67, 156, 132, 0.75);
+}
+body main .player-0 {
+  flex: 50%;
+}
+body main .player-1 {
+  flex: 50%;
+}
+body main .player-active {
+  background-color: rgba(67, 156, 132, 0.75);
+  color: black;
+  border-radius: 10px;
+}
+body main .player-active .name {
+  font-weight: 700;
+}
+body main .player-active .score {
+  font-weight: 900;
+}
+body main .player-active .current {
+  opacity: 1;
+}
+body img {
+  position: absolute;
+  top: 13em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10%;
+  height: 15%;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  transition: all 0.85s;
+}
+.player .name {
+  font-size: 1.5em;
+  margin-top: 2.5em;
+  padding: 1.3em;
+}
+.player .score {
+  margin-bottom: 5em;
+  font-size: 2.5em;
+}
+
+.btn {
+  position: absolute;
+  padding: 1em;
+  width: 15%;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-family: "Share Tech Mono", monospace;
+  transition: all 0.3s;
+  border: none;
+  background-color: rgba(237, 246, 246, 0.674);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn:active {
+  transform: translate(-50%, 5px);
+  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.15);
+}
+.btn:focus {
+  outline: none;
+}
+
+.current {
+  display: flex;
+  opacity: 0.6;
+  position: absolute;
+  border-radius: 25px;
+  background-color: rgba(208, 236, 241, 0.766);
+  padding: 0.8em 1.7em;
+  bottom: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.current .current-text {
+  margin-bottom: 15px;
+}
+.current .current-score {
+  font-size: 1.3em;
+}
+
+.btnnew {
+  top: 3em;
+}
+
+.btnroll {
+  bottom: 8em;
+}
+
+.btnhold {
+  bottom: 3em;
+}
+
+.hidden {
+  display: none;
+}
+
+.player-winner {
+  background-color: #161111;
+}
+.player-winner .name {
+  font-weight: 900;
+  color: rgb(220, 187, 187);
+}
+.player-winner .score {
+  font-weight: 900;
+  color: rgb(220, 187, 187);
+}
+.player-winner .current {
+  opacity: 1;
+}
+
+.show-modal {
+  position: absolute;
+  top: 50px;
+  left: 15%;
+  transform: translateX(-15%);
+  padding: 1em;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-family: "Share Tech Mono", monospace;
+  transition: all 0.3s;
+  border: none;
+  background-color: rgba(237, 246, 246, 0.674);
+}
+.show-modal:active {
+  transform: translate(-15%, 5px);
+  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.15);
+}
+.show-modal:focus {
+  outline: none;
+}
+
+.modal {
+  box-sizing: content-box;
+  position: absolute;
+  z-index: 555;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -90%);
+  text-align: center;
+  opacity: 1;
+  min-height: 400px;
+  background-color: rgb(127, 161, 127);
+  height: 350px;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.739);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.modal button {
+  position: absolute;
+  right: 10px;
+  color: rgba(255, 255, 255, 0.739);
+  top: 10px;
+  border: none;
+  font-size: 2em;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.modal h1 {
+  font-size: 5em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+.modal p {
+  font-size: 2em;
+  letter-spacing: -1px;
+  word-spacing: 4px;
+}
+
+.blurback {
+  filter: blur(15px);
+}/*# sourceMappingURL=main.css.map */
