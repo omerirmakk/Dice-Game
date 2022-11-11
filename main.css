@@ -261,6 +261,7 @@ body img {
 
 .player-winner {
   background-color: #161111;
+  border-radius: 25px;
 }
 .player-winner .name {
   font-weight: 900;
