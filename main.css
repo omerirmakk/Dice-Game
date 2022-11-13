@@ -176,7 +176,7 @@ body main .player-active .score {
 body main .player-active .current {
   opacity: 1;
 }
-body img {
+body .dices {
   position: absolute;
   top: 13em;
   left: 50%;
@@ -331,6 +331,10 @@ body img {
   font-size: 2em;
   letter-spacing: -1px;
   word-spacing: 4px;
+}
+.modal .newimg {
+  width: 200px;
+  margin-top: 5em;
 }
 
 .blurback {

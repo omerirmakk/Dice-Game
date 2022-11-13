@@ -172,7 +172,7 @@ body {
       }
     }
   }
-  img {
+  .dices {
     position: absolute;
     top: 13em;
     left: 50%;
@@ -320,6 +320,10 @@ body {
     font-size: 2em;
     letter-spacing: -1px;
     word-spacing: 4px;
+  }
+  .newimg {
+    width: 200px;
+    margin-top: 5em;
   }
 }
 .blurback {
