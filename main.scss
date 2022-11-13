@@ -139,16 +139,15 @@ body {
   min-height: 100vh;
   font-family: $font-family;
   background: $bg-color;
-
   main {
     display: flex;
     border-radius: 10px;
     position: relative;
-    background-color: transparent;
+    background-color: black;
     width: 65em;
     height: 40em;
     box-shadow: 56px 55px 46px 5px rgba(75, 197, 227, 0.75);
-    -webkit-box-shadow: 56px 55px 46px 5px rgba(68, 225, 215, 0.75);
+    -webkit-box-shadow: 56px 55px 46px 5px rgba(85, 210, 202, 0.75);
     -moz-box-shadow: 56px 55px 46px 5px rgba(67, 156, 132, 0.75);
     .player-0 {
       flex: 50%;
@@ -157,12 +156,13 @@ body {
       flex: 50%;
     }
     .player-active {
-      background-color: rgba(67, 156, 132, 0.75);
+      background-color: rgb(142, 184, 183);
       color: black;
       border-radius: 10px;
 
       .name {
-        font-weight: 700;
+        font-weight: 800;
+        font-size: 2em;
       }
       .score {
         font-weight: 900;
@@ -181,6 +181,7 @@ body {
     height: 15%;
   }
 }
+
 .player {
   display: flex;
   flex-direction: column;
@@ -220,7 +221,7 @@ body {
 }
 .current {
   display: flex;
-  opacity: 0.6;
+  opacity: 0.4;
   position: absolute;
   border-radius: 25px;
   background-color: rgba(208, 236, 241, 0.766);

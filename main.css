@@ -149,11 +149,11 @@ body main {
   display: flex;
   border-radius: 10px;
   position: relative;
-  background-color: transparent;
+  background-color: black;
   width: 65em;
   height: 40em;
   box-shadow: 56px 55px 46px 5px rgba(75, 197, 227, 0.75);
-  -webkit-box-shadow: 56px 55px 46px 5px rgba(68, 225, 215, 0.75);
+  -webkit-box-shadow: 56px 55px 46px 5px rgba(85, 210, 202, 0.75);
   -moz-box-shadow: 56px 55px 46px 5px rgba(67, 156, 132, 0.75);
 }
 body main .player-0 {
@@ -163,12 +163,13 @@ body main .player-1 {
   flex: 50%;
 }
 body main .player-active {
-  background-color: rgba(67, 156, 132, 0.75);
+  background-color: rgb(142, 184, 183);
   color: black;
   border-radius: 10px;
 }
 body main .player-active .name {
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 2em;
 }
 body main .player-active .score {
   font-weight: 900;
@@ -226,7 +227,7 @@ body .dices {
 
 .current {
   display: flex;
-  opacity: 0.6;
+  opacity: 0.4;
   position: absolute;
   border-radius: 25px;
   background-color: rgba(208, 236, 241, 0.766);
